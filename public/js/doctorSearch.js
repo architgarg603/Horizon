@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
         }
         
     });
-    search.addEventListener("keypress", async function(){
+    search.addEventListener("keypress", async function(e){
         if (e.key == "Enter"){
             const email = search.value;
             let data = await axios.post("http://localhost:3000/doctor/search", {email:email});
