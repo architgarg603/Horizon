@@ -121,7 +121,7 @@
         margin-top: 0px;
       }
 }
-@media only screen and (orientation: portrait) and (max-width: 420px)
+@media only screen and (orientation: portrait) and (max-width: 500px)
 {
     .div1Wrapper{
         display: none;

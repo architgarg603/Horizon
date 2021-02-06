@@ -1,4 +1,4 @@
-@media only screen and (orientation: portrait) and (max-width: 420px) {
+@media only screen and (orientation: portrait) and (max-width: 500px) {
   .container {
     height: 132%;
   }
