@@ -21,7 +21,7 @@ const cancelBtn = document.querySelector(".cancelBtn");
 async function fetchData(){
     let ul = document.createElement("ul");
     ul.classList.add("Reports");
-    let patientListObj = await axios.post("http://localhost:3000/doctor/getFollowing");
+    let patientListObj = await axios.post("https://horizoncenter.herokuapp.com/doctor/getFollowing");
     const obj = patientListObj.data.data;
     for(let i=0;i<obj.length;i++){
         let li = document.createElement("li");
@@ -123,7 +123,7 @@ window.addEventListener("load",function(){
              obj.timing = dfees.value;
          }
 
-          let newDetails = await axios.patch("http://localhost:3000/doctor/updateDetails",obj);
+          let newDetails = await axios.patch("https://horizoncenter.herokuapp.com/doctor/updateDetails",obj);
 
          saveBtn.style.display = "none";
          editBtn.style.display = "flex";

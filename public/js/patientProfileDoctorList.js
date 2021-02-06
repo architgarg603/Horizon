@@ -1,7 +1,7 @@
 const DoctorsList = document.querySelector(".DoctorsList");
 
 async function DocList(){
-    let data = await axios.post("http://localhost:3000/patient/getFollowers");
+    let data = await axios.post("https://horizoncenter.herokuapp.com/patient/getFollowers");
     const obj = data.data.data;
     let ul = document.createElement("ul");
     ul.classList.add("docList");
@@ -43,7 +43,7 @@ async function DocList(){
         cancelbtn.innerHTML = "Remove";
         cancelbtn.addEventListener("click",async function(){
             try{
-                await axios.post("http://localhost:3000/patient/unfollow",{doctorId:obj[i]._id});
+                await axios.post("https://horizoncenter.herokuapp.com/patient/unfollow",{doctorId:obj[i]._id});
                 window.alert = "Request canceled!!";
                 li.style.display = "none";
             }catch(err){

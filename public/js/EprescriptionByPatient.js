@@ -22,7 +22,7 @@ window.addEventListener("load", async function () {
 
     addEPrescriptionBtn.addEventListener("click", async function () {
         if (EpresProb.value && EpresDocName.value && EpresDepartment.value && EpresDate.value && addEprescription.value) {
-            let data = await axios.post("http://localhost:3000/patient/addEprescription", { name: EpresDocName.value, department: EpresDepartment.value, time: EpresDate.value, prescription: addEprescription.value, prob:EpresProb.value });
+            let data = await axios.post("https://horizoncenter.herokuapp.com/patient/addEprescription", { name: EpresDocName.value, department: EpresDepartment.value, time: EpresDate.value, prescription: addEprescription.value, prob:EpresProb.value });
             window.alert = "Prescription Added successfully!!";
             window.location.reload();
         } else {
@@ -50,7 +50,7 @@ window.addEventListener("load", async function () {
 
 
 async function getEPrescriptions() {
-    let data = await axios.post("http://localhost:3000/patient/getEprescription");
+    let data = await axios.post("https://horizoncenter.herokuapp.com/patient/getEprescription");
     const Eprescriptions = data.data.data;
     let ul = document.createElement("ul");
     ul.classList.add("EPrescriptions");

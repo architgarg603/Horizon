@@ -1,7 +1,7 @@
 const reqDiv = document.querySelector(".seePendingReq");
 
 async function addRequests(){
-    let data = await axios.post("http://localhost:3000/patient/getPendingReq");
+    let data = await axios.post("https://horizoncenter.herokuapp.com/patient/getPendingReq");
     const obj = data.data.data;
     let ul = document.createElement("ul");
     ul.classList.add("pendingReq");
@@ -39,7 +39,7 @@ async function addRequests(){
         acceptbtn.innerHTML = "Accept";
         acceptbtn.addEventListener("click",async function(){
             try{
-                await axios.post("http://localhost:3000/patient/comfirmReq",{doctorId:obj[i]._id});
+                await axios.post("https://horizoncenter.herokuapp.com/patient/comfirmReq",{doctorId:obj[i]._id});
                 window.alert = "Request Accepted!!";
                 li.style.display = "none"
             }catch(err){
@@ -52,7 +52,7 @@ async function addRequests(){
         cancelbtn.innerHTML = "Cancel";
         cancelbtn.addEventListener("click",async function(){
             try{
-                await axios.post("http://localhost:3000/patient/cancel",{doctorId:obj[i]._id});
+                await axios.post("https://horizoncenter.herokuapp.com/patient/cancel",{doctorId:obj[i]._id});
                 window.alert = "Request canceled!!";
                 li.style.display = "none";
             }catch(err){

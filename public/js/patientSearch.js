@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
 searchHandler = async () => {
     const email = search.value;
-    let data = await axios.post("http://localhost:3000/patient/search", { email: email });
+    let data = await axios.post("https://horizoncenter.herokuapp.com/patient/search", { email: email });
     let obj = data.data.data;
     if (obj.length == 0) {
 
@@ -21,7 +21,7 @@ searchEnterHandler = async (e) => {
     if (e.key == "Enter") {
 
         const email = search.value;
-        let data = await axios.post("http://localhost:3000/patient/search", { email: email });
+        let data = await axios.post("https://horizoncenter.herokuapp.com/patient/search", { email: email });
         let obj = data.data.data;
         if (obj.length == 0) {
 

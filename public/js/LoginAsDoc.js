@@ -27,7 +27,7 @@ registerBtnHandler = () => {
 
 submitBtnHandler = async () => {
     if (email.value && pass.value) {
-        let obj = await axios.post("http://localhost:3000/doctor/login", { email: email.value, password: pass.value });
+        let obj = await axios.post("https://horizoncenter.herokuapp.com/doctor/login", { email: email.value, password: pass.value });
         if (obj.data.data) {
             window.location.href = "/d/profile";
         } else {
@@ -41,7 +41,7 @@ submitBtnHandler = async () => {
 enterBtnHandler = async (e) => {
     if (e.key == "Enter") {
         if (email.value && pass.value) {
-            let obj = await axios.post("http://localhost:3000/doctor/login", { email: email.value, password: pass.value });
+            let obj = await axios.post("https://horizoncenter.herokuapp.com/doctor/login", { email: email.value, password: pass.value });
             if (obj.data.data) {
                 window.location.href = "/d/profile";
             } else {

@@ -38,7 +38,7 @@ window.addEventListener("load", async function () {
                         obj.testName = reportName.value;
                         obj.time = reportDate.value;
                         obj.department = reportDepartment.value;
-                        await axios.post("http://localhost:3000/doctor/addLb",obj);
+                        await axios.post("https://horizoncenter.herokuapp.com/doctor/addLb",obj);
                         window.alert("Added Report Updated");
                         window.location.reload();
                     })
@@ -54,7 +54,7 @@ window.addEventListener("load", async function () {
 
 
 async function getReport() {
-    let data = await axios.post("http://localhost:3000/doctor/getLb", {pid:pid});
+    let data = await axios.post("https://horizoncenter.herokuapp.com/doctor/getLb", {pid:pid});
     const reports = data.data.data;
     let ul = document.createElement("ul");
     ul.classList.add("Reports");

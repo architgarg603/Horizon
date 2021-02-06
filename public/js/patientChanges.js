@@ -12,7 +12,7 @@ const paddress = document.querySelector("#pAddress")
 dpBtn.addEventListener("change",async function (e) {
     const task = await storage.ref(`images/patient/${e.target.files[0].name}`).put(e.target.files[0]);
     let link = await storage.ref("images/patient").child(e.target.files[0].name).getDownloadURL()
-    await axios.patch("http://localhost:3000/patient/updateprofilephoto",{imagePath:link});
+    await axios.patch("https://horizoncenter.herokuapp.com/patient/updateprofilephoto",{imagePath:link});
     window.alert("Profile Pic Updated");
     window.location.reload();
 })
@@ -49,7 +49,7 @@ editBtn.addEventListener("click", function () {
             obj.age = page.value;
         }
 
-        let newDetails = await axios.patch("http://localhost:3000/patient/updateDetails", obj);
+        let newDetails = await axios.patch("https://horizoncenter.herokuapp.com/patient/updateDetails", obj);
 
         saveBtn.style.display = "none";
         editBtn.style.display = "flex";

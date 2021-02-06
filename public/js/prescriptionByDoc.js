@@ -36,7 +36,7 @@ window.addEventListener("load", async function () {
                         obj.time = presDate.value;
                         obj.pid = pid;
                         console.log(obj);
-                        await axios.post("http://localhost:3000/doctor/addPres",obj);
+                        await axios.post("https://horizoncenter.herokuapp.com/doctor/addPres",obj);
                         window.alert("Added Prescription");
                         window.location.reload();
                     })
@@ -52,7 +52,7 @@ window.addEventListener("load", async function () {
 
 
 async function getPres() {
-    let data = await axios.post("http://localhost:3000/doctor/getPres", {pid:pid});
+    let data = await axios.post("https://horizoncenter.herokuapp.com/doctor/getPres", {pid:pid});
     const Prescriptions = data.data.data;
     let ul = document.createElement("ul");
     ul.classList.add("Prescriptions");

@@ -33,7 +33,7 @@ submitbtnHandler = async () => {
     try {
         if (patientName.value && email.value && phone.value && address.value && pass.value && cpass.value && age.value) {
 
-            let obj = await axios.post("http://localhost:3000/patient/signup", { name: patientName.value, email: email.value, password: pass.value, confirmPassword: cpass.value, phone: phone.value, address: address.value,age:age.value});
+            let obj = await axios.post("https://horizoncenter.herokuapp.com/patient/signup", { name: patientName.value, email: email.value, password: pass.value, confirmPassword: cpass.value, phone: phone.value, address: address.value,age:age.value});
 
             if (obj.data.data) {
                 window.location.href = "/p/profile";
