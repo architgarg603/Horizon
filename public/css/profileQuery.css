@@ -26,6 +26,12 @@
     .div1Wrapper {
         width: 22%;
     }
+    .status{
+        margin-left: 20px;
+    }
+    .optionsForDoc i {
+        font-size: xx-large;
+    }
     .div2 {
         width: 78%;
     }
@@ -211,6 +217,11 @@
     }
     .profilePic{
         padding-bottom: 2%;
+    }
+    .optionsForDoc i{
+        font-size: large;
+        margin-left:5px;
+        height: 41px;
     }
     
 }
