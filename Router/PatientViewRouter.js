@@ -5,6 +5,7 @@ const { getPatientLogin, getPatientSignup, getConact, getEmergency, getHorizon, 
 const patientViewRouter = express.Router();
 
 patientViewRouter.route("").get(getHorizon);
+patientViewRouter.route("/logout").get(logout)
 patientViewRouter.use(PatientisLoggedIn);
 patientViewRouter.route("/profile").get(getPatientProfile)
 patientViewRouter.route("/labReports").get(getPatientLabReports);
@@ -17,7 +18,6 @@ patientViewRouter.route("/signup").get(getPatientSignup);
 patientViewRouter.route("/contact").get(getConact);
 patientViewRouter.route("/emergency").get(getEmergency);
 patientViewRouter.route("/thank").get(getThank);
-patientViewRouter.route("/logout").get(logout)
 patientViewRouter.route("/doc/:dId").get(getDoctorProfileFromPatientView)
 
 

@@ -6,6 +6,7 @@ const { getDocLogin, getDocSignup, getConact, getEmergency, getHorizon, getThank
 const DocViewRouter = express.Router();
 
 DocViewRouter.route("").get(getHorizon);
+DocViewRouter.route("/logout").get(logout)
 DocViewRouter.use(doctorisLoggedIn);
 DocViewRouter.route("/profile").get(getDocProfile)
 DocViewRouter.route("/login").get(getDocLogin);
@@ -13,7 +14,6 @@ DocViewRouter.route("/signup").get(getDocSignup);
 DocViewRouter.route("/contact").get(getConact);
 DocViewRouter.route("/emergency").get(getEmergency);
 DocViewRouter.route("/thank").get(getThank);
-DocViewRouter.route("/logout").get(logout)
 DocViewRouter.route("/patient/:pid").get(getPatientProfileByDoctor);
 DocViewRouter.route("/patient/p/:pid").get(getPatientProfilePresByDoctor);
 DocViewRouter.route("/patient/ep/:pid").get(getPatientProfileEpresByDoctor);
