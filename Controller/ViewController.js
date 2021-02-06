@@ -49,7 +49,7 @@ function getPatientSignup(req,res){
 
 function getConact(req,res){
     let isLoggedin = req.role?1:0;
-    res.render("contact.ejs", {isLoggedin:isLoggedin, role:req.role});
+    res.render("Contact.ejs", {isLoggedin:isLoggedin, role:req.role});
 }
 
 function getEmergency(req,res){
