@@ -120,7 +120,7 @@ window.addEventListener("load",function(){
          if(dfees.value){
              obj.fees = dfees.value;
          } if(dtime.value){
-             obj.timing = dfees.value;
+             obj.timing = dtime.value;
          }
 
           let newDetails = await axios.patch("https://horizoncenter.herokuapp.com/doctor/updateDetails",obj);
