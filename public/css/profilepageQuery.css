@@ -1,0 +1,43 @@
+@media only screen and (orientation: portrait) and (max-width: 420px) {
+  .container {
+    height: 132%;
+  }
+  .reqBtn,
+  .editBtn,
+  .saveBtn,
+  .ProfilecancelBtn,
+  .cancelBtn {
+    margin-left: 1%;
+    width: 320px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 380px) {
+  input {
+    height: 18px !important;
+    width: 171px;
+    margin: 0px 1px;
+  }
+  .container {
+    height: 150%;
+  }
+  .reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .cancelBtn {
+    margin-left: -1%;
+    width: 280px;
+}
+}
+
+@media only screen and (orientation:portrait) and (max-width: 325px){
+input {
+    height: 16px;
+    width: 149px;
+    margin: 0px 1px;
+}
+.container {
+    height: 159%;
+}
+.reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .cancelBtn {
+    margin-left: 1%;
+    width: 250px;
+}
+}
