@@ -9,17 +9,7 @@ const viewProblemName = document.querySelector(".epProblemName")
 const viewPrescription = document.querySelector(".epPrescrtion")
 
 window.addEventListener("load", async function () {
-
-   
-
-    openAddDialog.addEventListener("click", function () {
-        AddPresDialog.style.display = "block"
-    })
-    closeBtn.addEventListener("click", function () {
-        AddPresDialog.style.display = "none"
-
-    })
-    viewCloseBtn.addEventListener("click", function(){
+ viewCloseBtn.addEventListener("click", function(){
         viewDocName.innerHTML = "";
         viewDepartment.innerHTML = "";
         viewDate.innerHTML = "";
