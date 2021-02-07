@@ -26,15 +26,12 @@
     
     padding-top: 60px;
   }
-  input{
-    width: 30%;
-  }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 380px) {
   input {
     height: 18px !important;
-    width: 32%;
+    width: 171px;
     margin: 0px 1px;
   }
   .status{
