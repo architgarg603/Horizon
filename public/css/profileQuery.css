@@ -194,6 +194,9 @@
     .wrap{
         height: 700px;
     }
+    .Prescriptions, .EPrescriptions{
+        padding-bottom: 50px;
+    }
 
 
 }
@@ -216,7 +219,7 @@
         top: 30px;
     }
     .reportsWrapper{
-        height: 600px;
+        height: fit-content;
     }
     .pDetails {
         height: 401px;
