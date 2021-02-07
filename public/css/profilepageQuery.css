@@ -1,6 +1,6 @@
 @media only screen and (orientation: portrait) and (max-width: 500px) {
   .container {
-    height: 132%;
+    height: 140%;
   }
   .reqBtn,
   .editBtn,
@@ -43,7 +43,7 @@
   }
   
   .container {
-    height: 150%;
+    height: 155%;
     padding-top: 60px;
   }
   .reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .cancelBtn {
@@ -59,7 +59,7 @@ input {
     margin: 0px 1px;
 }
 .container {
-    height: 159%;
+    height: 167%;
 }
 .reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .cancelBtn {
     margin-left: 1%;

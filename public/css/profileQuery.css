@@ -83,6 +83,9 @@
         width: 50px;
         font-size: small;
     }
+    .cancelBtn{
+        font-size: large;
+    }
     #addPrescription,#LBDialogBox{
         top: 72px;
      
