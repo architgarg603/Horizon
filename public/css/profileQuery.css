@@ -160,6 +160,7 @@
         height: 243px;
         margin: 5px 29px;
         padding-right: 79px;
+        margin-bottom: 20px;
     }
     .pDetails {
         height: 430px;
@@ -186,6 +187,9 @@
     }
     #addEPrescrtion div div:nth-child(1){
         margin-right: 10%;
+    }
+    .wrap{
+        height: 700px;
     }
 
 
@@ -367,8 +371,6 @@
         top: 88px;
     }
 }
-
-
 
 @media only screen and (max-width:900px) {
     .activeBar{
