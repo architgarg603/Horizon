@@ -171,6 +171,7 @@
     }
     .mainprofile {
         flex-direction: column-reverse;
+        overflow: hidden;
     }
     .pDetails span {
         font-size: 17px;
