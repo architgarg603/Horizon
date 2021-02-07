@@ -181,7 +181,7 @@
         background-color: #fda98bc2;
         padding-bottom: 15px;
         transition: all 2s;
-        position: fixed;
+        position: absolute;
         backdrop-filter: blur(10px);
     }
     .nav-btn-slide li{
