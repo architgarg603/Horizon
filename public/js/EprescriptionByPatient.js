@@ -1,14 +1,4 @@
-const EpresDocName = document.querySelector("#addEPrescriptionDocName");
-const EpresDepartment = document.querySelector("#addEPrescriptionDepartment");
-const EpresDate = document.querySelector("#addEPrescriptionDate");
-const addEprescription = document.querySelector("#addEprescription");
-const EpresProb = document.querySelector("#addEPrescriptionProblemName");
-const addEPrescriptionBtn = document.querySelector("#addEPrescription");
 const EprescriptionDiv = document.querySelector(".eprescription")
-const EprescriptionMessage = document.querySelector("#addEPrescriptionMess")
-const openAddDialog = document.querySelector(".openAddEPrescriptionDialog");
-const AddPresDialog = document.querySelector("#addEPrescrtion");
-const closeBtn = document.querySelector(".closeBtn");
 
 const viewDialog = document.querySelector(".viewEPrescrtion")
 const viewCloseBtn = document.querySelector(".epclosebtn");
@@ -20,15 +10,7 @@ const viewPrescription = document.querySelector(".epPrescrtion")
 
 window.addEventListener("load", async function () {
 
-    addEPrescriptionBtn.addEventListener("click", async function () {
-        if (EpresProb.value && EpresDocName.value && EpresDepartment.value && EpresDate.value && addEprescription.value) {
-            let data = await axios.post("https://horizoncenter.herokuapp.com/patient/addEprescription", { name: EpresDocName.value, department: EpresDepartment.value, time: EpresDate.value, prescription: addEprescription.value, prob:EpresProb.value });
-            window.alert = "Prescription Added successfully!!";
-            window.location.reload();
-        } else {
-            EprescriptionMessage.innerHTML = "All Fields Are Compulsory";
-        }
-    })
+   
 
     openAddDialog.addEventListener("click", function () {
         AddPresDialog.style.display = "block"
