@@ -26,7 +26,7 @@
 ## Backend:
 - Node.js
 - MongoDB
-- Forebase
+- Firebase
 
 ## 🎓 What I learned?
 - MVC Architecture
